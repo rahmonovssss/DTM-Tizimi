@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+// 🔥 Firebase plaginini faollashtirish
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.dtm.uz"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    
+    // 🔥 Firebase kutubxonasini ulash
+    implementation 'com.google.firebase:firebase-messaging:23.0.0'
+    implementation 'com.google.firebase:firebase-analytics:21.0.0'
+}
+

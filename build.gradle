@@ -1,13 +1,14 @@
 buildscript {
     repositories {
         google() 
-        jcenter()
+        // jcenter() ni olib tashladik
+        mavenCentral() // O'rniga buni qo'shdik (bu hozirgi standart)
     }
     dependencies {
-        // Android Gradle plugin versiyasi
+        // Android Gradle plugin
         classpath 'com.android.tools.build:gradle:4.0.1' 
         
-        // 🔥 Firebase Google Services plaginini ulash (bu qator eng muhimi)
+        // Firebase Google Services plagin
         classpath 'com.google.gms:google-services:4.3.15' 
     }
 }
@@ -15,6 +16,7 @@ buildscript {
 allprojects {
     repositories {
         google() 
-        jcenter()
+        // Bu yerdan ham jcenter() ni olib tashladik
+        mavenCentral()
     }
 }

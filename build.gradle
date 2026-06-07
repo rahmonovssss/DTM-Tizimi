@@ -4,11 +4,11 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        // Eski 4.0.1 o'rniga yangiroq versiyani qo'yamiz
-        classpath 'com.android.tools.build:gradle:7.4.2' 
+        // Asosiy Android plugin versiyasi
+        classpath 'com.android.tools.build:gradle:7.4.2'
         
-        // Firebase Google Services
-        classpath 'com.google.gms:google-services:4.3.15' 
+        // Firebase Google Services plagin versiyasi
+        classpath 'com.google.gms:google-services:4.3.15'
     }
 }
 

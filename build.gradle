@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+        google() 
+        jcenter()
+    }
+    dependencies {
+        // Android Gradle plugin versiyasi
+        classpath 'com.android.tools.build:gradle:4.0.1' 
+        
+        // 🔥 Firebase Google Services plaginini ulash (bu qator eng muhimi)
+        classpath 'com.google.gms:google-services:4.3.15' 
+    }
+}
+
+allprojects {
+    repositories {
+        google() 
+        jcenter()
+    }
+}

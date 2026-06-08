@@ -14,13 +14,17 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           
-      # Faylga ruxsat berish (muhim!)
-      - name: Grant execute permission for gradlew
+      # 1. gradlew faylini o'zimiz yaratamiz (bu yechim!)
+      - name: Create Gradle Wrapper
+        run: gradle wrapper
+        
+      # 2. Endi chmod buyrug'ini ishlatamiz
+      - name: Grant execute permission
         run: chmod +x gradlew
         
-      # Eski versiyalardagi xatolarni ko'rsatish uchun
+      # 3. Build jarayoni
       - name: Build with Gradle
-        run: ./gradlew assembleDebug --warning-mode all
+        run: ./gradlew assembleDebug
         
       - name: Upload APK
         uses: actions/upload-artifact@v4

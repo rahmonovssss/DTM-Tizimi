@@ -7,21 +7,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
-
-      # 1. Avval gradlew faylini yaratamiz (agar u yo'q bo'lsa)
-      - name: Setup Gradle
-        run: gradle wrapper
-
-      # 2. Endi ./gradlew orqali build qilamiz
+          
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+        
       - name: Build with Gradle
-        run: chmod +x gradlew && ./gradlew assembleDebug
-
+        run: ./gradlew assembleDebug
+        
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:

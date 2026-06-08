@@ -1,4 +1,4 @@
-package com.dtm.uz;
+package com.example.myquizapp;
 
 import android.app.Activity;
 import android.content.Intent;

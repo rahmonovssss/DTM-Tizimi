@@ -14,15 +14,15 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           
-      # 1. gradlew faylini o'zimiz yaratamiz (bu yechim!)
-      - name: Create Gradle Wrapper
+      # Loyiha uchun gradlew ni yaratish
+      - name: Setup Gradle
         run: gradle wrapper
         
-      # 2. Endi chmod buyrug'ini ishlatamiz
-      - name: Grant execute permission
+      # Faylga ruxsat berish
+      - name: Make gradlew executable
         run: chmod +x gradlew
         
-      # 3. Build jarayoni
+      # Build
       - name: Build with Gradle
         run: ./gradlew assembleDebug
         

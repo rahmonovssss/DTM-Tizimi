@@ -7,17 +7,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
           
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      # Ushbu qadam gradlew faylini serverda yaratib beradi
+      - name: Create Gradle Wrapper
+        run: gradle wrapper
         
+      # Faylga ruxsat beramiz va ishga tushiramiz
       - name: Build with Gradle
-        run: ./gradlew assembleDebug
+        run: chmod +x gradlew && ./gradlew assembleDebug
         
       - name: Upload APK
         uses: actions/upload-artifact@v4

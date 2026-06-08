@@ -14,13 +14,13 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           
-      # Ushbu qadam gradlew faylini serverda yaratib beradi
-      - name: Create Gradle Wrapper
-        run: gradle wrapper
+      # Faylga ruxsat berish (muhim!)
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
         
-      # Faylga ruxsat beramiz va ishga tushiramiz
+      # Eski versiyalardagi xatolarni ko'rsatish uchun
       - name: Build with Gradle
-        run: chmod +x gradlew && ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --warning-mode all
         
       - name: Upload APK
         uses: actions/upload-artifact@v4

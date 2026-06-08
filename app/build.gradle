@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace "com.dtm.uz"
+    namespace "com.example.myquizapp"
     compileSdk 34
     
     defaultConfig {
-        applicationId "com.dtm.uz"
+        applicationId "com.example.myquizapp"
         minSdk 21
         targetSdk 34
         versionCode 1
